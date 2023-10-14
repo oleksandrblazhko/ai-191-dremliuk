@@ -1,0 +1,32 @@
+@startuml
+
+title UML-діаграма розгортання ПП Venator
+
+skinparam componentStyle uml1
+
+left to right direction
+
+node "<<Клієнт>>" as cl {
+  node "<<Web Browser>>" {
+    component [*.ts]
+    component [*.html]
+  }
+}
+
+node "<<Сервер>>" as serv1 {
+	  node "<<Kestrel>>" {
+	    component [*.cs]
+	}
+}
+
+cl -- serv1
+
+node "<<База Даних>>" as bd1 {
+	  node "<<Microsoft SQL Server>>" {
+	    database DB
+	}
+}
+
+serv1 -- bd1
+
+@enduml
