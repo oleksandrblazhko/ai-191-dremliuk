@@ -93,4 +93,3 @@ else
 
 * DomXSSWiki
 * Стаття DOM XSS від Аміта Кляйна
-* 
